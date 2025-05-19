@@ -1,0 +1,34 @@
+2. Calculadora Simples
+-------------------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    float num1, num2;
+    char op;
+    cout << "Digite dois números: ";
+    cin >> num1 >> num2;
+    cout << "Digite a operação (+, -, *, /): ";
+    cin >> op;
+
+    switch(op) {
+        case '+':
+            cout << "Resultado: " << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << "Resultado: " << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << "Resultado: " << num1 * num2 << endl;
+            break;
+        case '/':
+            if (num2 != 0)
+                cout << "Resultado: " << num1 / num2 << endl;
+            else
+                cout << "Divisão por zero!" << endl;
+            break;
+        default:
+            cout << "Operação inválida!" << endl;
+    }
+    return 0;
+}
