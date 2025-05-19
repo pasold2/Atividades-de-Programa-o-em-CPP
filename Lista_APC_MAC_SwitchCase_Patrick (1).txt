@@ -1,0 +1,176 @@
+Patrick - Lista Switch Case - APC MAC
+
+1. Dias de Semana
+-------------------------------
+
+#include <iostream>
+
+using namespace std;
+int main() 
+{   int dia;
+    cout << "insira dia da semana" << endl;
+    cin >> dia;
+    switch (dia) {
+        case 1:
+         cout << "domingo" << endl;
+         break;
+        case 2:
+         cout << "segunda" << endl;
+         break;
+         case 3:
+         cout << "terça" << endl;
+         break;
+         case 4:
+         cout << "quarta" << endl;
+         break;
+         case 5:
+         cout << "quinta" << endl;
+         break;
+         case 6:
+         cout << "sexta" << endl;
+         break;
+         case 7:
+         cout << "sábado" << endl;
+         break;
+         default:
+         cout << "dia inválido" << endl;
+         break;
+         
+    }
+
+    return 0;
+}
+2. Calculadora Simples
+-------------------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    float num1, num2;
+    char op;
+    cout << "Digite dois números: ";
+    cin >> num1 >> num2;
+    cout << "Digite a operação (+, -, *, /): ";
+    cin >> op;
+
+    switch(op) {
+        case '+':
+            cout << "Resultado: " << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << "Resultado: " << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << "Resultado: " << num1 * num2 << endl;
+            break;
+        case '/':
+            if (num2 != 0)
+                cout << "Resultado: " << num1 / num2 << endl;
+            else
+                cout << "Divisão por zero!" << endl;
+            break;
+        default:
+            cout << "Operação inválida!" << endl;
+    }
+    return 0;
+}
+
+3. Classificação por Nota
+-------------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int nota;
+    cout << "Digite uma nota de 0 a 10: ";
+    cin >> nota;
+
+    switch(nota) {
+        case 10:
+        case 9:
+            cout << "Conceito A" << endl;
+            break;
+        case 8:
+        case 7:
+            cout << "Conceito B" << endl;
+            break;
+        case 6:
+        case 5:
+            cout << "Conceito C" << endl;
+            break;
+        case 4:
+        case 3:
+            cout << "Conceito D" << endl;
+            break;
+        case 2:
+        case 1:
+        case 0:
+            cout << "Conceito E" << endl;
+            break;
+        default:
+            cout << "Nota inválida!" << endl;
+    }
+    return 0;
+}
+
+
+4. Menu de Opções
+---------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int opcao;
+    cout << "Menu:\n1 - Novo Jogo\n2 - Carregar Jogo\n3 - Configurações\n4 - Sair\nEscolha uma opção: ";
+    cin >> opcao;
+
+    switch(opcao) {
+        case 1:
+            cout << "Novo Jogo iniciado!" << endl;
+            break;
+        case 2:
+            cout << "Carregando jogo..." << endl;
+            break;
+        case 3:
+            cout << "Abrindo configurações..." << endl;
+            break;
+        case 4:
+            cout << "Saindo do jogo." << endl;
+            break;
+        default:
+            cout << "Opção inválida!" << endl;
+    }
+    return 0;
+}
+
+
+5. Conversão Mês Estação
+-------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int mes;
+    cout << "Digite o número do mês (1 a 12): ";
+    cin >> mes;
+
+    switch(mes) {
+        case 12: case 1: case 2:
+            cout << "Estação: Verão" << endl;
+            break;
+        case 3: case 4: case 5:
+            cout << "Estação: Outono" << endl;
+            break;
+        case 6: case 7: case 8:
+            cout << "Estação: Inverno" << endl;
+            break;
+        case 9: case 10: case 11:
+            cout << "Estação: Primavera" << endl;
+            break;
+        default:
+            cout << "Mês inválido!" << endl;
+    }
+    return 0;
+}
+
+
