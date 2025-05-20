@@ -1,0 +1,20 @@
+3. Cálculo de Média e Aprovação
+-------------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    float nota1, nota2, nota3, media;
+    cout << "Digite as três notas: ";
+    cin >> nota1 >> nota2 >> nota3;
+    media = (nota1 + nota2 + nota3) / 3;
+    cout << "Média: " << media << endl;
+    if (media >= 7) {
+        cout << "Aprovado" << endl;
+    } else if (media >= 5) {
+        cout << "Recuperação" << endl;
+    } else {
+        cout << "Reprovado" << endl;
+    }
+    return 0;
+}
