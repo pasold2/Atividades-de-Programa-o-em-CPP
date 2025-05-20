@@ -1,0 +1,17 @@
+5. Classificação de Idade
+-------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade;
+    cout << "Digite sua idade: ";
+    cin >> idade;
+    if (idade >= 0 && idade <= 12)
+        cout << "Criança" << endl;
+    else if (idade >= 13 && idade <= 17)
+        cout << "Adolescente" << endl;
+    else
+        cout << "Adulto" << endl;
+    return 0;
+}
