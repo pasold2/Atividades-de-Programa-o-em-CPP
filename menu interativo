@@ -1,0 +1,66 @@
+Código do menu interativo com switch case: 
+#include <iostream> 
+#include <iomanip> 
+#include <vector> 
+#include <string> 
+using namespace std; 
+int main() { 
+int opcao; 
+double total = 0.0; 
+vector<string> pedidos; 
+do { 
+cout << "\n------ Menu do Restaurante ------\n"; 
+cout << "1 - Filé de Frango Grelhado .............. R$ 24,90\n"; 
+cout << "2 - Lasanha à Bolonhesa .................. R$ 32,50\n"; 
+cout << "3 - Strogonoff de Carne .................. R$ 29,00\n"; 
+cout << "4 - Suco de Laranja Natural .............. R$ 9,50\n"; 
+cout << "5 - Água com Gás .......................... R$ 5,00\n"; 
+cout << "0 - Finalizar pedido\n"; 
+cout << "------------------------------------------\n"; 
+cout << "Digite o número do seu pedido: "; 
+cin >> opcao; 
+cout << "\n"; 
+switch (opcao) { 
+case 1: 
+cout << "Você escolheu: Filé de Frango Grelhado - R$ 24,90\n"; 
+total += 24.90; 
+pedidos.push_back("Filé de Frango Grelhado - R$ 24,90"); 
+break; 
+case 2: 
+cout << "Você escolheu: Lasanha à Bolonhesa - R$ 32,50\n"; 
+total += 32.50; 
+pedidos.push_back("Lasanha à Bolonhesa - R$ 32,50"); 
+break; 
+case 3: 
+cout << "Você escolheu: Strogonoff de Carne - R$ 29,00\n"; 
+total += 29.00; 
+pedidos.push_back("Strogonoff de Carne - R$ 29,00"); 
+break; 
+case 4: 
+cout << "Você escolheu: Suco de Laranja Natural - R$ 9,50\n"; 
+total += 9.50; 
+pedidos.push_back("Suco de Laranja Natural - R$ 9,50"); 
+break; 
+case 5: 
+cout << "Você escolheu: Água com Gás - R$ 5,00\n"; 
+total += 5.00; 
+pedidos.push_back("Água com Gás - R$ 5,00"); 
+break; 
+case 0: 
+cout << "Finalizando pedido...\n"; 
+break; 
+default: 
+cout << "Opção inválida. Tente novamente.\n"; 
+break; 
+} 
+} while (opcao != 0); 
+cout << "\n------ Itens do Pedido ------\n"; 
+for (const string& item : pedidos) { 
+} 
+cout << "- " << item << "\n"; 
+cout << fixed << setprecision(2); 
+cout << "------------------------------\n"; 
+cout << "Total a pagar: R$ " << total << endl; 
+cout << "Obrigado pela preferência!\n"; 
+return 0; 
+}
