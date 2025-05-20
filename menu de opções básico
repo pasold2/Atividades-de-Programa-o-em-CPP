@@ -1,0 +1,29 @@
+4. Menu de Opções
+---------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int opcao;
+    cout << "Menu:\n1 - Novo Jogo\n2 - Carregar Jogo\n3 - Configurações\n4 - Sair\nEscolha uma opção: ";
+    cin >> opcao;
+
+    switch(opcao) {
+        case 1:
+            cout << "Novo Jogo iniciado!" << endl;
+            break;
+        case 2:
+            cout << "Carregando jogo..." << endl;
+            break;
+        case 3:
+            cout << "Abrindo configurações..." << endl;
+            break;
+        case 4:
+            cout << "Saindo do jogo." << endl;
+            break;
+        default:
+            cout << "Opção inválida!" << endl;
+    }
+    return 0;
+}
+
